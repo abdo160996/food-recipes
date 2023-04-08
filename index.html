@@ -8,41 +8,41 @@
     <meta name="theme-color" content="light dark" />
     <title>food recipes</title>
   </head>
-  <body class="text-gray-600 dark:text-neutral-50 font-body dark:bg-darkPurple">
+  <body class="bg-neutral-50 font-body text-gray-600 dark:bg-darkPurple dark:text-neutral-50">
     <!-- wrapper start -->
     <div class="px-4">
       <!-- Nav start -->
-      <div class="shadow-sm rounded-md bg-back my-4 dark:bg-purple">
-        <nav class="flex items-center justify-between md:justify-around p-4 relative">
+      <div class="my-4 rounded-md bg-back shadow-sm dark:bg-purple">
+        <nav class="relative flex items-center justify-between p-4 md:justify-around">
           <div>
-            <h1 class="font-bold border-gray-100 text-xl">
-              <a href="/" class="hover:text-primary transition-colors">Food Recipes</a>
+            <h1 class="border-gray-100 text-xl font-bold">
+              <a href="/" class="transition-colors hover:text-primary">Food Recipes</a>
             </h1>
           </div>
-          <div class="md:hidden cursor-pointer" id="burger-m">
-            <img src="./imgs/menu.svg" class="w-7 alt=" />
+          <div class="cursor-pointer md:hidden" id="burger-m">
+            <img src="./imgs/menu.svg" class="alt= w-7" />
           </div>
 
           <ul
-            class="p-2 bg-slate-200 dark:dark:bg-lightPurple md:bg-transparent rounded-full shadow-md hidden md:flex absolute md:static top-16 left-1/2 transform -translate-x-1/2 md:translate-x-0"
+            class="absolute left-1/2 top-16 hidden -translate-x-1/2 transform rounded-full bg-slate-200 p-2 shadow-md dark:dark:bg-lightPurple md:static md:flex md:translate-x-0 md:bg-transparent"
             id="menu-list"
           >
             <div class="flex">
               <li class="mr-12 md:mr-4">
-                <a href="#" class="flex items-center hover:text-primary transition-colors">
-                  <img src="./imgs/home2.svg" alt="home icon" class="w-5 inline-block mr-1" />
+                <a href="#" class="flex items-center transition-colors hover:text-primary">
+                  <img src="./imgs/home2.svg" alt="home icon" class="mr-1 inline-block w-5" />
                   <span>Home</span>
                 </a>
               </li>
               <li class="mr-12 md:mr-4">
-                <a href="#" class="flex items-center hover:text-primary transition-colors">
-                  <img src="./imgs/about.svg" alt="about icon" class="w-5 inline-block mr-1" />
+                <a href="#" class="flex items-center transition-colors hover:text-primary">
+                  <img src="./imgs/about.svg" alt="about icon" class="mr-1 inline-block w-5" />
                   <span>About</span>
                 </a>
               </li>
               <li class="mr-12 md:mr-4">
-                <a href="#" class="flex items-center hover:text-primary transition duration-200 ease-in-out">
-                  <img src="./imgs/contact.svg" alt="contact icon" class="w-5 inline-block mr-1" />
+                <a href="#" class="flex items-center transition duration-200 ease-in-out hover:text-primary">
+                  <img src="./imgs/contact.svg" alt="contact icon" class="mr-1 inline-block w-5" />
                   <span>Contact</span>
                 </a>
               </li>
@@ -52,43 +52,43 @@
           <div class="flex">
             <!-- <a href="#" class="mr-2 btn">log in</a>
             <a href="#" class="btn">sign up</a> -->
-            <a href="#" id="theme-switch" class="ml-2 btn bg-slate-400">Theme </a>
+            <a href="#" id="theme-switch" class="btn ml-2 bg-slate-400">switch colors</a>
           </div>
         </nav>
       </div>
       <!-- nav End -->
       <!-- start search -->
-      <div class="flex justify-center border-red-100 mt-20 md:mt-1">
-        <div class="border-2 h-12 rounded-full flex items-center overflow-hidden bg-white">
-          <input id="query" type="text" class="px-5 py-4 focus:outline-none dark:text-darkPurple" placeholder="search by recipe name..." />
+      <div class="mt-20 flex justify-center border-red-100 md:mt-1">
+        <div class="border-1 flex h-12 items-center overflow-hidden rounded-full border-2 border-lightPurple bg-white dark:border-none dark:bg-lightPurple">
+          <input id="query" type="text" class="px-5 py-4 focus:outline-none dark:bg-lightPurple dark:text-offWhite" placeholder="search by recipe name..." />
           <button id="results" class="btn mr-3">Search</button>
         </div>
       </div>
 
-      <div class="my-6 p-3 rounded-lg overflow-hidden hidden">
+      <div class="my-6 hidden overflow-hidden rounded-lg p-3">
         <!-- <h4 class="">Search By Recipe Name</h4> -->
         <div
           id="search-results"
-          class="border-1 border-purple border-dashed dark:border-2 rounded-md dark:bg-none p-2 flex snap-mandatory snap-x overflow-x-scroll xl:justify-center xl:overflow-hidden"
+          class="border-1 flex snap-x snap-mandatory overflow-x-scroll rounded-md border-dashed border-purple p-2 dark:border-2 dark:bg-none xl:justify-center xl:overflow-hidden"
         ></div>
       </div>
-      <div id="error" class="p-2 font-bold text-red-600 text-lg text-center hidden">No Recipes Please Try Again later...</div>
+      <div id="error" class="hidden p-2 text-center text-lg font-bold text-red-600">No Recipes Please Try Again later...</div>
       <!-- end search -->
-      <main class="p-3 rounded-md shadow-sm my-10">
-        <header class="py-5 rounded-md dark:bg-purple dark:bg-none bg-gradient-to-r from-blue-100 to-emerald-200">
-          <h2 class="text-2xl text-center bg-clip-text font-bold">Comfort Food Classics</h2>
+      <main class="my-10 rounded-md p-3 shadow-sm">
+        <header class="rounded-md bg-gradient-to-r from-blue-100 to-emerald-200 py-5 dark:bg-purple dark:bg-none">
+          <h2 class="bg-clip-text text-center text-2xl font-bold">Comfort Food Classics</h2>
         </header>
 
         <div class="my-6">
           <!-- <h4 class="">Latest Receipes</h4> -->
-          <div class="latest-cards grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10"></div>
+          <div class="latest-cards grid gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"></div>
         </div>
         <!-- <div>
           <h4 class="border-b">Most Popular Receipes</h4>
           <div class="recent-cards"></div>
         </div> -->
         <div class="flex justify-center" id="load">
-          <div class="bg-cyan-700 btn">load more...</div>
+          <div class="btn bg-cyan-700">load more...</div>
         </div>
       </main>
     </div>
