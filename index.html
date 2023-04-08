@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <meta name="theme-color" content="light dark" />
     <title>food recipes</title>
   </head>
-  <body class="text-gray-600 font-body">
+  <body class="text-gray-600 dark:text-neutral-50 font-body dark:bg-darkPurple">
     <!-- wrapper start -->
     <div class="px-4">
       <!-- Nav start -->
-      <div class="shadow-sm rounded-md bg-back my-4">
+      <div class="shadow-sm rounded-md bg-back my-4 dark:bg-purple">
         <nav class="flex items-center justify-between md:justify-around p-4 relative">
           <div>
             <h1 class="font-bold border-gray-100 text-xl">
@@ -22,7 +23,10 @@
             <img src="./imgs/menu.svg" class="w-7 alt=" />
           </div>
 
-          <ul class="p-2 bg-slate-200 md:bg-transparent rounded-full shadow-md hidden md:flex absolute md:static top-16 left-1/2 transform -translate-x-1/2 md:translate-x-0" id="menu-list">
+          <ul
+            class="p-2 bg-slate-200 dark:dark:bg-lightPurple md:bg-transparent rounded-full shadow-md hidden md:flex absolute md:static top-16 left-1/2 transform -translate-x-1/2 md:translate-x-0"
+            id="menu-list"
+          >
             <div class="flex">
               <li class="mr-12 md:mr-4">
                 <a href="#" class="flex items-center hover:text-primary transition-colors">
@@ -46,31 +50,32 @@
           </ul>
 
           <div class="flex">
-            <a href="#" class="mr-2 btn">log in</a>
-            <a href="#" class="btn">sign up</a>
+            <!-- <a href="#" class="mr-2 btn">log in</a>
+            <a href="#" class="btn">sign up</a> -->
+            <a href="#" id="theme-switch" class="ml-2 btn bg-slate-400">Theme </a>
           </div>
         </nav>
       </div>
       <!-- nav End -->
       <!-- start search -->
       <div class="flex justify-center border-red-100 mt-20 md:mt-1">
-        <div class="border-2 rounded-full flex items-center overflow-hidden">
-          <input id="query" type="text" class="px-5 py-4 focus:outline-none" placeholder="search by recipe name..." />
+        <div class="border-2 h-12 rounded-full flex items-center overflow-hidden bg-white">
+          <input id="query" type="text" class="px-5 py-4 focus:outline-none dark:text-darkPurple" placeholder="search by recipe name..." />
           <button id="results" class="btn mr-3">Search</button>
         </div>
       </div>
 
-      <div class="my-6 p-3 bg-back rounded-lg overflow-hidden hidden">
+      <div class="my-6 p-3 rounded-lg overflow-hidden hidden">
         <!-- <h4 class="">Search By Recipe Name</h4> -->
         <div
           id="search-results"
-          class="rounded-md bg-gradient-to-r from-blue-100 to-emerald-200 p-2 flex scroll-ps-6 snap-mandatory snap-x overflow-x-scroll xl:justify-center xl:overflow-hidden"
+          class="border-1 border-purple border-dashed dark:border-2 rounded-md dark:bg-none p-2 flex snap-mandatory snap-x overflow-x-scroll xl:justify-center xl:overflow-hidden"
         ></div>
       </div>
       <div id="error" class="p-2 font-bold text-red-600 text-lg text-center hidden">No Recipes Please Try Again later...</div>
       <!-- end search -->
-      <main class="p-3 rounded-md shadow-sm bg-back my-10">
-        <header class="py-5 rounded-md bg-gradient-to-r from-blue-100 to-emerald-200">
+      <main class="p-3 rounded-md shadow-sm my-10">
+        <header class="py-5 rounded-md dark:bg-purple dark:bg-none bg-gradient-to-r from-blue-100 to-emerald-200">
           <h2 class="text-2xl text-center bg-clip-text font-bold">Comfort Food Classics</h2>
         </header>
 
@@ -91,7 +96,6 @@
 
     <!-- javascript file -->
     <script src="./main.js" type="module"></script>
-    <script src="./recipeBySearch.js" type="module"></script>
-    <script src="./randomRecipes.js" type="module"></script>
+    <script src="./darkMode.js"></script>
   </body>
 </html>
