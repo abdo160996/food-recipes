@@ -16,7 +16,7 @@ burgerMenu.addEventListener('click', () => {
 
 
 //get from local Storage
-if (localStorage.length !== 0) {
+if (localStorage.getItem("recipes")) {
     latestCards.innerHTML = JSON.parse(localStorage.getItem("recipes"))
 } else {
     latestCards.innerHTML = await getRandomRecipes()
