@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>food recipes</title>
+  </head>
+  <body class="text-gray-600 font-body">
+    <!-- wrapper start -->
+    <div class="px-4">
+      <!-- Nav start -->
+      <div class="shadow-sm rounded-md bg-back my-4">
+        <nav class="flex items-center justify-between md:justify-around p-4 relative">
+          <div>
+            <h1 class="font-bold border-gray-100 text-xl">
+              <a href="/" class="hover:text-primary transition-colors">Food Recipes</a>
+            </h1>
+          </div>
+          <div class="md:hidden cursor-pointer" id="burger-m">
+            <img src="./imgs/menu.svg" class="w-7 alt=" />
+          </div>
+
+          <ul class="p-2 bg-slate-200 md:bg-transparent rounded-full shadow-md hidden md:flex absolute md:static top-16 left-1/2 transform -translate-x-1/2 md:translate-x-0" id="menu-list">
+            <div class="flex">
+              <li class="mr-12 md:mr-4">
+                <a href="#" class="flex items-center hover:text-primary transition-colors">
+                  <img src="./imgs/home2.svg" alt="home icon" class="w-5 inline-block mr-1" />
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="mr-12 md:mr-4">
+                <a href="#" class="flex items-center hover:text-primary transition-colors">
+                  <img src="./imgs/about.svg" alt="about icon" class="w-5 inline-block mr-1" />
+                  <span>About</span>
+                </a>
+              </li>
+              <li class="mr-12 md:mr-4">
+                <a href="#" class="flex items-center hover:text-primary transition duration-200 ease-in-out">
+                  <img src="./imgs/contact.svg" alt="contact icon" class="w-5 inline-block mr-1" />
+                  <span>Contact</span>
+                </a>
+              </li>
+            </div>
+          </ul>
+
+          <div class="flex">
+            <a href="#" class="mr-2 btn">log in</a>
+            <a href="#" class="btn">sign up</a>
+          </div>
+        </nav>
+      </div>
+      <!-- nav End -->
+      <!-- start search -->
+      <div class="flex justify-center border-red-100 mt-20 md:mt-1">
+        <div class="border-2 rounded-full flex items-center overflow-hidden">
+          <input id="query" type="text" class="px-5 py-4 focus:outline-none" placeholder="search by recipe name..." />
+          <button id="results" class="btn mr-3">Search</button>
+        </div>
+      </div>
+
+      <div class="my-6 bg-back rounded-lg overflow-hidden hidden">
+        <!-- <h4 class="">Search By Recipe Name</h4> -->
+        <div id="search-results" class="p-2 flex scroll-ps-6 snap-mandatory snap-x overflow-x-scroll xl:justify-center xl:overflow-hidden"></div>
+      </div>
+      <div id="error" class="p-2 font-bold text-red-600 text-lg text-center hidden">No Recipes Please Try Again later...</div>
+      <!-- end search -->
+      <main class="px-3 rounded-md shadow-sm bg-back my-10">
+        <header class="py-5">
+          <h2 class="text-2xl text-center font-bold">Comfort Food Classics</h2>
+        </header>
+
+        <div class="my-6">
+          <!-- <h4 class="">Latest Receipes</h4> -->
+          <div class="latest-cards grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-10"></div>
+        </div>
+        <!-- <div>
+          <h4 class="border-b">Most Popular Receipes</h4>
+          <div class="recent-cards"></div>
+        </div> -->
+        <div class="flex justify-center" id="load">
+          <div class="bg-cyan-700 btn">load more...</div>
+        </div>
+      </main>
+    </div>
+    <!-- wrapper end -->
+
+    <!-- javascript file -->
+    <script src="./main.js" type="module"></script>
+    <script src="./recipeBySearch.js" type="module"></script>
+    <script src="./randomRecipes.js" type="module"></script>
+  </body>
+</html>
