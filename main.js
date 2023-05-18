@@ -34,7 +34,7 @@ loadMoreBtn.addEventListener("click", async () => {
         loadMoreBtn.classList.add("pointer-events-none")
     } else {
         counter++;
-        latestCards.innerHTML = await getRandomRecipes()
+        latestCards.innerHTML += await getRandomRecipes()
     }
 })
 
