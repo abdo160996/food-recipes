@@ -16,13 +16,16 @@ burgerMenu.addEventListener('click', () => {
 
 
 //get from local Storage
-if (localStorage.getItem("recipes")) {
+document.addEventListener("DOMContentLoaded", ()=>{
+  if (localStorage.getItem("recipes")) {
     console.log("from storage")
     latestCards.innerHTML = JSON.parse(localStorage.getItem("recipes"))
 } else {
     console.log("new recipes")
     latestCards.innerHTML = await getRandomRecipes()
 }
+});
+
 
 
 let counter = 0
