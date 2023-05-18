@@ -28,9 +28,9 @@ export async function getRandomRecipes() {
                 </div>`
             cards += cardTemplate;
         });
-        console.log(localStorage.length)
+       
         localStorage.setItem("recipes", JSON.stringify(cards))
-        console.log(localStorage.length)
+     
 
     } catch (error) {
         console.log(error)
