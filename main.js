@@ -16,7 +16,7 @@ burgerMenu.addEventListener('click', () => {
 
 
 //get from local Storage
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", async()=>{
   if (localStorage.getItem("recipes")) {
 
     latestCards.innerHTML = JSON.parse(localStorage.getItem("recipes"))
